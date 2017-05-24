@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александр Вареник](https://up.htmlacademy.ru/adaptive/11/user/289783).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Попенко].
 
 ---
 
