@@ -16,13 +16,11 @@
           <ul class="main-nav__list-main">
             <li class="main-nav__item"><a href="">Каталог товаров</a></li>
             <li class="main-nav__item"><a href="">Вязание на заказ</a></li>
+            <li class="main-nav__item  main-nav__item--search"><a href="">Поиск по сайту</a></li>
+            <li class="main-nav__item  main-nav__item--basket"><a href="">Корзина:<span> пока пуста</span></a></li>
             <li class="main-nav__item main-nav__item--full"><a href="">Новые поступления</a></li>
             <li class="main-nav__item main-nav__item--full"><a href="">Распродажа</a></li>
           </ul>
-          <div class="main-nav__search"></div>
-          <div class="main-nav__purchases">
-            <a class="main-nav__basket" href="">Корзина:<span> пока пуста</span></a>
-          </div>
         </div>
         <div class="delivery-info"><a class="delivery-info__link" href="">Бесплатная доставка по России</a></div>
       </nav>
@@ -64,6 +62,24 @@
             <span class="product-item__price">Цена:<span> 990 руб.</span></span>
             <a class="product-item__order btn" href="">Заказать</a>
           </div>
+        </div>
+        <div class="order-popup">
+          <form class="order-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="order-form__wrapper">
+            <h3 class="order-form__title">Добавить в корзину</h3>
+            <input type="radio" id="size-s" name="size" value="s" checked>
+            <input type="radio" id="size-m" name="size" value="m">
+            <input type="radio" id="size-l" name="size" value="l">
+            <div class="order-form__variants-list">
+              <label for="size-s"></label>
+              <label for="size-m"></label>
+              <label for="size-l"></label>
+            </div>
+            <div class="order-form__add btn">
+              <input type="submit" value="Добавить">
+            </div>
+          </div>
+          </form>
         </div>
       </section>
       <section class="about">
@@ -116,6 +132,7 @@
           <a class="contacts__write btn" href="">Напишите нам</a>
         </div>
       </section>
+    </main>
       <footer class="page-footer">
         <div class="page-footer__wrapper">
           <div class="page-footer__logo">
@@ -134,6 +151,5 @@
           </p>
         </div>
       </footer>
-    </main>
   </body>
 </html>
