@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
+    <title>HTML Academy: Мишка - Форма заказа</title>
   </head>
   <body>
     <header class="page-header">
@@ -43,7 +43,7 @@
             <legend>Тип</legend>
             <input type="radio" id="interior" name="type" value="interior">
             <label for="interior">Аксессуар для интерьра</label>
-            <input type="text" id="toy" name="type" value="toy">
+            <input type="radio" id="toy" name="type" value="toy">
             <label for="toy">Детская игрушка</label>
           </fieldset>
           <fieldset class="order-form__item">
@@ -71,16 +71,16 @@
             <label class="order-form__label" for="patronymic">Отчество:</label>
           </fieldset>
           <fieldset class="order-form__item">
-            <label class="order-form__legend" for="tel">Tел</label>
+            <legend class="order-form__legend">Tел</legend>
             <input class="order-form__field-phone" type="tel" id="tel" name="first-name" placeholder="+7 ХХХ ХХ ХХ*" required>
           </fieldset>
           <fieldset class="order-form__item">
-            <label class="order-form__legend" for="email">e-mail</label>
+            <legend class="order-form__legend">e-mail</legend>
             <input class="order-form__field-email" type="email" id="email" name="first-name" placeholder="Ваш Email*" required>
           </fieldset>
           <fieldset class="order-form__item">
-            <label class="order-form__legend" for="text">Доп</label>
-            <textarea class="order-form__field-textarea" name="text" id="text">Опишите все ваши пожелания к заказу</textarea>
+            <legend class="order-form__legend">Доп</legend>
+            <textarea class="order-form__field-textarea" name="text" id="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </fieldset>
           <small class="order-form__legend-full"><sup>*</sup>Поля обязательны для заполнения</small>
           <div class="order-form__add btn">
