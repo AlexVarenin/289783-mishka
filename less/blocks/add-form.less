@@ -1,9 +1,55 @@
 .add-form {
   background-color: @bg-white;
+  border-bottom: 1px solid #c7c7c7;
   border-top: 1px solid #c7c7c7;
+  box-shadow: 0 6px 10px  #c7c7c7;
+}
 
+.add-form__wrapper {
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 46px;
+  padding: 30px 30px 46px 30px;
 }
 
 .add-form__title {
   margin: 0;
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
 }
+.add-form__lable {
+  margin-top: 11px;
+  color: #444444;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.add-form__input {
+  display: none;
+}
+
+.add-form__variants-list {
+  margin-top: 7px;
+  margin-bottom: 31px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.add-form__item {
+  width: 80px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid #ececec;
+}
+.add-form__input--s:checked ~ .add-form__variants-list .add-form__item--s,
+.add-form__input--m:checked ~ .add-form__variants-list .add-form__item--m,
+.add-form__input--l:checked ~ .add-form__variants-list .add-form__item--l {
+  border-color: @bg-menthol;
+}
+
