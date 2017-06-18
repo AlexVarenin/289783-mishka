@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
+      <div class="page-header__wrapper">
         <h1 class="page-header__title visually-hidden">Главное меню магазина Мишки</h1><!‐‐ скрыт! ‐‐>
         <div class="page-header__logo">
           <img src="img/logo-mobile.svg" width="86" height="36" alt="Магазин «Мишка»">
@@ -23,7 +26,7 @@
         <nav class="customer-nav customer-nav--nojs">
           <div class="customer-nav__wrapper-main">
             <ul class="customer-nav__list-main">
-              <li class="customer-nav__item"><a class="customer-nav__item-search" href="">Поиск по сайту</a></li>
+              <li class="customer-nav__item"><a class="customer-nav__item-search" href=""><span>Поиск по сайту</span></a></li>
               <li class="customer-nav__item"><a class="customer-nav__item-cart" href="">Корзина:<span> пока пуста</span></a></li>
             </ul>
           </div>
@@ -31,26 +34,27 @@
       <nav class="bottom-nav">
         <div class="bottom-nav__wrapper-main">
             <ul class="bottom-nav__list-eddition">
-              <li class="bottom-nav__item"><a href="">Новые поступления</a></li>
-              <li class="bottom-nav__item"><a href="">Распродажа</a></li>
+              <li class="bottom-nav__item bottom-nav__item--eddition"><a href="">Новые поступления</a></li>
+              <li class="bottom-nav__item bottom-nav__item--eddition"><a href="">Распродажа</a></li>
             </ul>
              <ul class="bottom-nav__list-delivery">
               <li class="bottom-nav__item main-nav__item--delivery"><a href="">Бесплатная доставка по России</a></li>
             </ul>
           </div>
         </nav>
+      </div>
     </header>
     <section class="promo-title promo-title--index">
       <div class="promo-title__wrapper">
-        <p class="promo-title__title">Милые штуки ручной работы для дома</p>
+        <p class="promo-title__title">Милые штуки ручной <br>работы для дома</p>
       </div>
     </section>
     <section class="proposition-menu">
       <div class="proposition-menu__wrapper">
         <h2 class="proposition-menu__title visually-hidden">Наши товары</h2><!‐‐ скрыт! ‐‐>
         <ul class="proposition-menu__list">
-          <li class="proposition-menu__item"><a class="proposition-menu__item-interior" href="">Предметы интерьра</a></li>
-          <li class="proposition-menu__item"><a class="proposition-menu__item-toys" href="">Детские игрушки</a></li>
+          <li class="proposition-menu__item"><a class="proposition-menu__item-interior" href="">Предметы <br>интерьра</a></li>
+          <li class="proposition-menu__item"><a class="proposition-menu__item-toys" href="">Детские <br>игрушки</a></li>
         </ul>
       </div>
     </section>
@@ -77,11 +81,15 @@
             </table>
           </div>
           <div class="recomended-item__image">
-            <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+            <picture>
+             <!-- <img src="img/triple-set-mobile@1x.jpg" width="333" height="404" alt="Вязаные корзинки">-->
+            </picture>
           </div>
           <div class="recomended-item__footer">
-            <span class="recomended-item__price">Цена:<span> 990 руб.</span></span>
-            <a class="recomended-item__order btn">Заказать</a>
+            <!--<div class="recomended-item__footer-wrapper">-->
+              <span class="recomended-item__price">Цена:<span> 990 руб.</span></span>
+              <a class="recomended-item__order btn" href="add_form.html">Заказать</a>
+            <!--</div>-->
           </div>
         </div>
       </section>
@@ -101,6 +109,7 @@
       <section class="reviews">
         <div class="reviews__wrapper">
           <h2 class="reviews__title">Отзывы</h2>
+          <a class="reviews__write btn" href="">Написать</a>
           <div class="reviews__list slider">
             <blockquote class="reviews__item slider__item">
               <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
@@ -108,10 +117,11 @@
             </blockquote>
           </div>
           <div class="reviews__btns">
-            <a class="reviews__btn reviews__btn--prev" href="">Предыдущий отзыв</a>
-            <a class="reviews__btn reviews__btn--next" href="">Следующий отзыв</a>
+            <div class="reviews__btns-wrapper">
+              <a class="reviews__btn reviews__btn--prev" href="">Предыдущий отзыв</a>
+              <a class="reviews__btn reviews__btn--next" href="">Следующий отзыв</a>
+            </div>
           </div>
-          <a class="reviews__write btn" href="">Написать</a>
         </div>
       </section>
       <section class="contacts">
@@ -120,15 +130,14 @@
           <table class="contacts__table table">
             <tr class="table__row">
               <td class="table__cell table__cell--contacts">e-mail:</td>
-              <td class="table__cell table__cell--contacts">info@mimimishkashop.ru</td>
+              <td class="table__cell table__cell--contacts"><a>info@mimimishkashop.ru</a></td>
             </tr>
             <tr class="table__row">
               <td class="table__cell table__cell--contacts">адрес:</td>
-              <td class="table__cell table__cell--contacts">г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101</td>
+              <td class="table__cell table__cell--contacts">г. Санкт-Петербург, <br>ул. Большая Конюшенная,<br> д. 19/8, офис 101</td>
             </tr>
           </table>
           <div class="contacts__map">
-            <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="Карта">
           </div>
           <a class="contacts__write btn" href="">Напишите нам</a>
         </div>
@@ -137,7 +146,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-          <img src="http://placehold.it/86x36" width="86" height="36" alt="Магазин «Мишка»">
+          <img src="img/logo-mobile.svg" width="86" height="36" alt="Магазин «Мишка»">
         </div>
         <div class="page‐footer__social social-links">
             <a class="social-links__item social-links__item--insta" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
@@ -150,11 +159,11 @@
         </div>
       </div>
     </footer>
-    <div class="order-popup">
-      <div class="order-popup__wrapper">
+    <div class="popup">
+      <div class="popup__wrapper">
         <form class="add-form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="add-form__wrapper">
-            <h3 class="add-form__title">Добавить <br>в корзину</h3>
+            <h3 class="add-form__title">Добавить в корзину</h3>
             <p class="add-form__lable">Выберите размер:</p>
             <input class="add-form__input add-form__input--s" type="radio" id="size-s" name="size" value="s" checked>
             <input class="add-form__input add-form__input--m" type="radio" id="size-m" name="size" value="m">
@@ -200,11 +209,13 @@
     });
 
 
-     var orderButton = document.querySelector('.recomended-item__order');
-     var popup = document.querySelector('.order-popup');
+    var orderButton = document.querySelector('.recomended-item__order');
+     var popup = document.querySelector('.popup');
+
+     orderButton.removeAttribute('href');
 
      orderButton.addEventListener('click', function() {
-       popup.classList.add('order-popup--active');
+       popup.classList.add('popup--active');
     });
 
   </script>
