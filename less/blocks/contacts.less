@@ -16,8 +16,11 @@
 .contacts__map {
   display: block;
   position: relative;
+  width: 320px;
+  height: 458px;
   margin-right: -30px;
   margin-left: -30px;
+  background-image: url("../img/map-mobile@1x.jpg");
 &::before {
     content: "";
     position: absolute;
@@ -37,13 +40,126 @@
   color: #444444;
 }
 
+.contacts__table a {
+  text-decoration: none;
+  border-bottom: 1px solid #62d1ba;
+}
+
 .contacts__write {
+  margin: auto;
   margin-top: 32px;
   margin-bottom: 39px;
 }
 
+@media @tablet-widths {
 
+  .contacts__wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+    background: url("../img/icon-flag.svg") no-repeat;
+    background-position: top 0 right 50px;
+  }
 
+  .contacts__title {
+    font-size: 43px;
+    line-height: 50px;
+    padding-top: 26px;
+  }
 
+  .contacts__table tbody{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 17px;
+    line-height: 30px;
+    color: #444444;
+  }
+
+  .contacts__table tr {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contacts__table td:first-child {
+    width: 75px;
+  }
+
+  .contacts__table td:last-child {
+    width: 255px;
+  }
+
+  .contacts__map {
+    width: 768px;
+    height: 457px;
+    margin-right: -50px;
+    margin-left: -50px;
+    background-image: url("http://placehold.it/768x457");
+    &::before {
+      top: 165px;
+      right: 353px;
+      }
+    }
+
+  .contacts__write {
+    width: 200px;
+  }
+}
+
+@media @desktop-widths {
+  .contacts {
+  }
+
+  .contacts__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: no-wrap;
+    padding-left: 275px;
+    padding-right: 100px;
+    background-position: top 125px left 162px;
+  }
+
+  .contacts__title {
+    order: -3;
+    width: 300px;
+    font-size: 53px;
+    line-height: 57px;
+    padding-top: 100px;
+  }
+
+  .contacts__table tbody {
+    display: table;
+  }
+
+  .contacts__table tr {
+    display: table;
+  }
+
+  .contacts__map {
+    position: absolute;
+    top: 67px;
+    left: 625px;
+    margin: 0;
+    width: 525px;
+    background-image: url("http://placehold.it/525x457");
+    &::before {
+      top: 165px;
+      right: 230px;
+    }
+  }
+
+  table.contacts__table {
+    order: -2;
+    width: 300px;
+  }
+
+  .contacts__write {
+    order: -1;
+    width: 200px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 105px;
+  }
+}
 
 

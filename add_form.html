@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Страница формы добавления в корзину</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="popup popup--active">
+      <div class="popup__wrapper">
+        <form class="add-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="add-form__wrapper">
+            <h3 class="add-form__title">Добавить <br>в корзину</h3>
+            <p class="add-form__lable">Выберите размер:</p>
+            <input class="add-form__input add-form__input--s" type="radio" id="size-s" name="size" value="s" checked>
+            <input class="add-form__input add-form__input--m" type="radio" id="size-m" name="size" value="m">
+            <input class="add-form__input add-form__input--l" type="radio" id="size-l" name="size" value="l">
+            <div class="add-form__variants-list">
+              <label class="add-form__item add-form__item--s" for="size-s">s</label>
+              <label class="add-form__item add-form__item--m" for="size-m">m</label>
+              <label class="add-form__item add-form__item--l" for="size-l">l</label>
+            </div>
+            <div class="add-form__add">
+              <input class="btn btn--solid_menthol" type="submit" value="Добавить">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
