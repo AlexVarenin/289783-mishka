@@ -4,10 +4,11 @@
   background-size: 320px 8px;
 }
 
-.recomended-item__wrapper {
-  padding-left: 30px;
-  padding-right: 30px;
-}
+  .recomended-item__wrapper {
+    .container();
+   padding-left: 30px;
+   padding-right: 30px;
+  }
 
 .recomended-item__title {
   margin: 0;
@@ -24,7 +25,7 @@
 .recomended-item__desc {
   color: #444444;
   font-size: 15px;
-  line-height: 20px;
+  line-height: 24px;
   padding-top: 23px;
   padding-bottom: 23px;
 }
@@ -61,17 +62,39 @@
 @media @tablet-widths {
 
   .recomended-item {
+    position: relative;
     background-position: left -16px bottom 0;
     background-size: auto 17px;
+     &::before  {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 0;
+      width: 100vw;
+      height: 12px;
+      background: url("../img/wawe_tablet.svg") repeat-x;
+      background-size: auto 23px;
+      z-index: 500;
+    }
   }
 
   .recomended-item__wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .recomended-item__content {
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  .recomended-item__header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
-    padding-left: 50px;
-    padding-right: 50px;
   }
 
   .recomended-item__title {
@@ -81,31 +104,36 @@
   }
 
   .recomended-item__label {
-    width: 100px;
+    width: 70px;
+    padding-right: 28px;
     padding-top: 55px;
     line-height: 17px;
     text-align: center;
   }
 
   .recomended-item__image {
+    float: right;
+    box-sizing: border-box;
     margin-top: 57px;
-    width: 333px;
+    width: 50%;
     height: 404px;
   }
 
   .recomended-item__desc {
+    float: left;
+    box-sizing: border-box;
     margin-top: 30px;
-    margin-right: 44px;
-    width: 290px;
+    padding-right: 45px;
+    width: 50%;
     font-size: 17px;
     line-height: 30px;
-    padding-bottom: 140px;
-
   }
 
   .recomended-item__footer {
-    margin-top: -120px;
-    width: 290px;
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+    padding-right: 45px;
     margin-bottom: 17px;
   }
 
@@ -125,53 +153,60 @@
 @media @desktop-widths {
 
   .recomended-item {
-    margin-left: 100px;
-    margin-right: 100px;
-    background-position: left -26px bottom 0;
-    background-size: 1050px auto;
+    background: none;
+     &::before  {
+      width: 100%;
+      top: -20px;
+      height: 20px;
+      background-size: auto 36px;
+    }
   }
 
 
   .recomended-item__wrapper {
-    padding-left: 0;
-    position: relative;
-    justify-content: flex-start;
-    width: 665px;
-    margin-bottom: 35px;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-bottom: 35px;
+    background: url("../img/wave.svg") no-repeat;
+    background-position: left 100px bottom 0;
+    background-size: 1050px auto;
+
+
+  }
+.recomended-item__header {
+    margin-top: 72px;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    width: 700px;
+    margin-bottom: -108px;
   }
 
   .recomended-item__title {
-    margin-top: 82px;
-    order: -2;
     font-size: 53px;
     line-height: 57px;
     z-index: 500;
   }
 
   .recomended-item__label {
-    margin-top: 82px;
-    padding-right: 47px;
-    padding-left: 25px;
-    order: -3;
+    padding-right: 50px;
+    padding-left: 50px;
   }
 
   .recomended-item__desc {
-    orider: 1;
-    margin-left: 175px;
-    padding-bottom: 90px;
+    box-sizing: border-box;
+    margin-top: 0;
+    padding-left: 175px;
+    padding-top: 130px;
+    padding-bottom: 25px;
   }
 
   .recomended-item__image {
-    position: absolute;
-    top: 10px;
-    right: -335px;
-    width: 523px;
-    height: 637px;
-    background-color: red;
+    margin-top: 0;
+    height: 535px;
   }
 
   .recomended-item__footer {
     margin-top: 0;
-    margin-left: 175px;
+    padding-left: 175px;
   }
 }
