@@ -1,6 +1,10 @@
 .proposition-menu {
+}
+
+.proposition-menu__wrapper {
   .container();
 }
+
 .proposition-menu__list {
   display: flex;
   flex-direction: column;
@@ -22,6 +26,7 @@
   font-weight: bold;
   text-align: left;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .proposition-menu__item-interior {
@@ -75,17 +80,7 @@
   .proposition-menu__list {
     position: relative;
     flex-direction: row;
-    &::before  {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: -50px;
-      width: 768px;
-      height: 12px;
-      background: url("../img/wawe_tablet.svg") repeat-x;
-      background-size: auto 23px;
-      z-index: 500;
-    }
+
 }
   .proposition-menu__item a {
     width: 304px;
@@ -105,16 +100,5 @@
     padding-bottom: 30px;
     padding-top: 30px;
 
-  }
-
-  .proposition-menu__list {
-    &::before  {
-      left: -100px;
-      width: 1250px;
-      height: 20px;
-      background: url("../img/wawe_tablet.svg") no-repeat;
-      background-size: 1250px 37px;
-      z-index: 500;
-    }
   }
 }
