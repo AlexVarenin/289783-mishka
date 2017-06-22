@@ -1,6 +1,6 @@
 .promo-title {
   .container();
-  height: 283px;
+  height: 176px;
   font-size: 27px;
   line-height: 30px;
   font-weight: bold;
@@ -10,9 +10,15 @@
 
 @media @mobile-widths-only {
   .promo-title--index {
+    height: 283px;
     background-image: url("../img/hero-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: center -17px;
+    background-color: #f9f9f9;
+    @media @retina {
+      background-image: url("../img/hero-mobile@2x.jpg");
+      background-size: 575px auto;
+    }
   }
 }
 .promo-title__wrapper {
@@ -26,13 +32,18 @@
 @media @tablet-widths {
 
   .promo-title {
-    height: 627px;
+    height: 750px;
     font-size: 43px;
     line-height: 50px;
   }
   .promo-title--index {
-    background-image: url("http://placehold.it/768x627");
-    background-repeat: no-repeat;
+    height: 750px;
+    background-image: url("../img/hero-desktop@1x.jpg");
+    background-position: center top;
+    @media @retina {
+      background-image: url("../img/hero-desktop@2x.jpg");
+      background-size: 1150px auto;
+    }
   }
 
   .promo-title__title {
@@ -47,7 +58,11 @@
     line-height: 57px;
   }
   .promo-title--index {
-    background-image: url("http://placehold.it/1250x750");
-    background-repeat: no-repeat;
+    height: 750px;
+    background-size: 1250px 746px;
+    background-position: center top;
+    @media @retina {
+      background-size: 1250px 746px;
+    }
   }
 }

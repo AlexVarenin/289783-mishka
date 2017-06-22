@@ -1,0 +1,32 @@
+
+.products {
+}
+
+.products__wrapper {
+  .container();
+  padding: 30px 30px 0 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media @tablet-widths {
+  .products {
+    margin-top: 67px;
+  }
+
+  .products__wrapper {
+    padding: 0 49px;
+  }
+}
+
+@media @desktop-widths {
+  .products {
+    margin-top: 111px;
+  }
+
+  .products__wrapper {
+    padding: 0 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

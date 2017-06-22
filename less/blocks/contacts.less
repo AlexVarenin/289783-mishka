@@ -26,18 +26,7 @@
   width: 100%;
   min-width: 320px;
   height: 458px;
-  background-image: url("../img/map-mobile@1x.jpg");
-&::before {
-    content: "";
-    position: absolute;
-    top: 165px;
-    right: 50%;
 
-    width: 66px;
-    height: 100px;
-
-    background-image: url("../img/icon-map-pin.svg");
-  }
 }
 
 .contacts__table {
@@ -105,12 +94,7 @@
     height: 457px;
     margin-right: -50px;
     margin-left: -50px;
-    background-image: url("http://placehold.it/768x457");
-    &::before {
-      top: 165px;
-      right: 353px;
-      }
-    }
+  }
 
   .contacts__write {
     width: 200px;
@@ -160,11 +144,6 @@
     float: right;
     margin: 0;
     width: 50%;
-    background-image: url("http://placehold.it/525x457");
-    &::before {
-      top: 165px;
-      right: 230px;
-    }
   }
 
   table.contacts__table {
@@ -185,8 +164,12 @@
 
   .contacts__write {
     margin: 0;
-    padding-top: 100%;
   }
+
+  .contacts__btns a {
+  margin-left: 0;
+  }
+
 }
 
 
