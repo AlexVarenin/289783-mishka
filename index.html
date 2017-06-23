@@ -29,8 +29,22 @@
         <nav class="customer-nav customer-nav--nojs">
           <div class="customer-nav__wrapper-main">
             <ul class="customer-nav__list-main">
-              <li class="customer-nav__item"><a class="customer-nav__item-search" href=""><span>Поиск по сайту</span></a></li>
-              <li class="customer-nav__item"><a class="customer-nav__item-cart" href="">Корзина:<span> пока пуста</span></a></li>
+              <li class="customer-nav__item">
+                <a class="customer-nav__item-search" href="">
+                  <svg width="21" height="18">
+                    <use xlink:href="#icon-search"></use>
+                  </svg>
+                  <span>Поиск по сайту</span>
+                </a>
+              </li>
+              <li class="customer-nav__item">
+                <a class="customer-nav__item-cart" href="">
+                  <svg width="21" height="18">
+                    <use xlink:href="#icon-cart"></use>
+                  </svg>
+                  <span>Корзина: пока пуста</span>
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -217,9 +231,12 @@
 });
      }
 
-
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+    <script>
+      !function(a,b){"use strict";var c="img/symbols.svg",d=1;if(!b.createElementNS||!b.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)return!0;var e,f,g="localStorage"in a&&null!==a.localStorage,h=function(){b.body.insertAdjacentHTML("afterbegin",f)},i=function(){b.body?h():b.addEventListener("DOMContentLoaded",h)};if(g&&localStorage.getItem("inlineSVGrev")==d&&(f=localStorage.getItem("inlineSVGdata")))return i(),!0;try{e=new XMLHttpRequest,e.open("GET",c,!0),e.onload=function(){e.status>=200&&e.status<400&&(f=e.responseText,i(),g&&(localStorage.setItem("inlineSVGdata",f),localStorage.setItem("inlineSVGrev",d)))},e.send()}catch(j){}}(window,document);
+    </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeiOHjM923ewofgj6ehtVvngz8Nq5Nr_o&callback=initMap"></script>
 
 
      <script>

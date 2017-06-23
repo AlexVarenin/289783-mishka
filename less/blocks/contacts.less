@@ -22,8 +22,6 @@
 }
 .contacts__map {
   display: block;
-  position: relative;
-  width: 100%;
   min-width: 320px;
   height: 458px;
 
@@ -38,6 +36,17 @@
 .contacts__table a {
   text-decoration: none;
   border-bottom: 1px solid #62d1ba;
+
+  &:hover {
+    border-bottom-color: @bg-darkmenthol;
+    color: @bg-menthol;
+  }
+
+  &:active {
+    border-bottom-color: @bg-darkmenthol;
+    color: @bg-menthol;
+    opacity: 0.3;
+  }
 }
 
 .contacts__btns a {

@@ -1,7 +1,10 @@
 .container() {
   box-sizing: border-box;
-  width: 320px;
   margin: 0 auto;
+
+  @media @mobile-widths-only {
+    width: 320px;
+  }
 
   @media @tablet-widths {
     width: 768px;
@@ -11,6 +14,20 @@
     width: 1250px;
   }
 }
+
+.hoverActive() {
+  &:hover {
+      opacity: 0.5;
+    }
+    &:active {
+      opacity: 0.2;
+    }
+  &:active, &:hover, &:focus {
+    outline: 0;
+    outline-offset: 0;
+  }
+}
+
 
 .hideText() {
   text-indent: 100%;
