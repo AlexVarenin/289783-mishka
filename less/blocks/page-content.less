@@ -4,3 +4,34 @@
   flex-direction: column;
   background-color: @bg-white;
 }
+
+@media @tablet-widths {
+  .page-content {
+    background-position: left -16px bottom 0;
+    background-size: auto 17px;
+     &::before  {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 0;
+      width: 100vw;
+      height: 12px;
+      background: url("../img/bg-zigzag-fill.svg") repeat-x;
+      background-size: auto 23px;
+      z-index: 500;
+    }
+  }
+}
+
+@media @desktop-widths {
+
+  .page-content {
+
+     &::before  {
+      width: 100%;
+      top: -20px;
+      height: 20px;
+      background-size: auto 35px;;
+    }
+  }
+}

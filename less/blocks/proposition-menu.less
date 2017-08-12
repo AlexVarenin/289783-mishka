@@ -31,8 +31,18 @@
   &:hover {
     margin-top: -5px;
     padding-bottom: 25px;
+    &:before {
+      opacity: 0.2;
+    }
   }
-
+  &:active {
+    margin-top: -5px;
+    padding-bottom: 25px;
+    color: lighten(@bg-menthol, 15%);
+    &:before {
+      opacity: 0.1;
+    }
+  }
 
 
 }

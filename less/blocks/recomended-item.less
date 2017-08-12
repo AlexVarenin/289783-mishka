@@ -1,5 +1,5 @@
 .recomended-item {
-  background: url("../img/wave.svg") repeat-x;
+  background: url("../img/bg-zigzag-line.svg") repeat-x;
   background-position: left -8px bottom 0;
   background-size: 320px 8px;
 }
@@ -60,34 +60,13 @@
 
 @media @tablet-widths {
 
-  .recomended-item {
-    position: relative;
-    background-position: left -16px bottom 0;
-    background-size: auto 17px;
-     &::before  {
-      content: "";
-      position: absolute;
-      top: -12px;
-      left: 0;
-      width: 100vw;
-      height: 12px;
-      background: url("../img/wawe_tablet.svg") repeat-x;
-      background-size: auto 23px;
-      z-index: 500;
-    }
-  }
-
   .recomended-item__wrapper {
     padding-left: 50px;
     padding-right: 50px;
   }
 
   .recomended-item__content {
-    &::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
+    .clearfix();
   }
 
   .recomended-item__header {
@@ -154,12 +133,6 @@
 
   .recomended-item {
     background: none;
-     &::before  {
-      width: 100%;
-      top: -20px;
-      height: 20px;
-      background-size: auto 36px;
-    }
   }
 
 
@@ -167,7 +140,7 @@
     padding-right: 100px;
     padding-left: 100px;
     padding-bottom: 35px;
-    background: url("../img/wave.svg") no-repeat;
+    background: url("../img/bg-zigzag-line.svg") no-repeat;
     background-position: left 100px bottom 0;
     background-size: 1050px auto;
 

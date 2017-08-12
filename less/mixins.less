@@ -14,14 +14,25 @@
     width: 1250px;
   }
 }
+.clearfix() {
+   &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+}
+
 
 .hoverActive() {
   &:hover {
-      opacity: 0.5;
+      opacity: 0.6;
     }
     &:active {
       opacity: 0.2;
     }
+  .vithoutOutline();
+}
+.vithoutOutline(){
   &:active, &:hover, &:focus {
     outline: 0;
     outline-offset: 0;
@@ -30,7 +41,7 @@
 
 
 .hideText() {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
 }

@@ -34,7 +34,18 @@
   background-color: @bg-white;
   border-bottom: 1px solid #ececec;
 
-   .hoverActive();
+  .vithoutOutline();
+
+  &:hover {
+    color: #666666;
+    & svg {
+      fill: @bg-darkmenthol;
+      opacity: 1;
+    }
+  }
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .customer-nav__item-search {
@@ -47,14 +58,6 @@
     top: 30px;
     left: 30px;
     opacity: 0.5;
-  &:hover {
-    stroke: @bg-menthol;
-    opacity: 1;
-  }
-  &:active {
-    stroke: @bg-menthol;
-    opacity: 0.5;
-  }
 }
 
 .customer-nav__item-cart {

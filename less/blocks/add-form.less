@@ -46,6 +46,9 @@
   font-weight: bold;
   text-transform: uppercase;
   border: 2px solid #ececec;
+  &:hover {
+    border-color: #c7c7c7;
+  }
 }
 .add-form__input--s:checked ~ .add-form__variants-list .add-form__item--s,
 .add-form__input--m:checked ~ .add-form__variants-list .add-form__item--m,
@@ -71,5 +74,10 @@
   .add-form__title {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+@media @desktop-widths {
+  .add-form {
+    width: 567px;
   }
 }

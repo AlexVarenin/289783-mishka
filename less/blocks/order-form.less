@@ -1,0 +1,357 @@
+.order-form__inner-wrapper {
+  .container();
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.order-form__desc {
+  padding-top: 10px;
+  font-size: 14px;
+  color: #444444;
+  padding-bottom: 10px;
+}
+.order-form__item {
+  border: none;
+  border-top: 1px solid #62d1ba;
+  padding: 0;
+  margin: 0;
+  padding-top: 28px;
+  padding-bottom: 10px;
+}
+
+.order-form__item legend {
+  padding-right: 30px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: @bg-menthol;
+}
+
+.order-form__input-hidden {
+  display: none;
+}
+
+.order-form__radio,
+.order-form__checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 14px;
+}
+
+
+.order-form__radio div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid @bg-darkgrey;
+  &:hover {
+    border-color: @bg-menthol;
+  }
+  &:active {
+    border-color: #c7c7c7;
+  }
+}
+
+.order-form__checkbox div {
+  width: 40px;
+  height: 40px;
+  border: 2px solid @bg-darkgrey;
+  &:hover {
+    border-color: @bg-menthol;
+  }
+  &:active {
+    border-color: #c7c7c7;
+  }
+}
+
+.order-form__input-hidden:checked + .order-form__radio div {
+  background: radial-gradient(circle closest-side, @bg-menthol 8px, transparent 9px);
+}
+
+.order-form__input-hidden:checked + .order-form__checkbox div {
+  background: url("../img/icon-tick.svg") no-repeat;
+  background-position: left 3px bottom 7px;
+}
+
+  .order-form__radio p,
+  .order-form__checkbox p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 23px;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 18px;
+}
+
+.order-form__input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid @bg-darkgrey;
+  padding-bottom: 19px;
+  margin-bottom: 23px;
+  &:hover,
+  &:focus {
+    border-color: @bg-menthol;
+  }
+
+  &::-webkit-input-placeholder {
+    color:#bdbdbd;
+    font-size: 17px;
+    line-height: 18px;
+  }
+  &::-moz-placeholder {
+    color:#bdbdbd;
+    font-size: 17px;
+    line-height: 18px;
+  }
+  &:-ms-input-placeholder {
+    color:#bdbdbd;
+    font-size: 17px;
+    line-height: 18px;
+  }
+}
+
+.order-form__label {
+  display: block;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  padding-bottom: 15px;
+}
+
+.order-form__label-icon {
+  position: relative;
+  float: right;
+  & svg {
+    position: absolute;
+    top: -70px;
+    right: 0;
+    fill: #c1c1c1;
+  }
+}
+
+.order-form__input:hover + .order-form__label-icon svg,
+.order-form__input:focus + .order-form__label-icon svg {
+  fill: @bg-menthol;
+}
+
+
+
+.order-form__field-textarea {
+  box-sizing: border-box;
+  border: 2px solid @bg-darkgrey;
+  resize: none;
+  outline: none;
+  width: 100%;
+  height: 142px;
+  padding: 18px;
+
+  &::-webkit-input-placeholder {
+    color:#bdbdbd;
+    font-size: 17px;
+    line-height: 18px;
+  }
+  &::-moz-placeholder {
+    color:#bdbdbd;
+    font-size: 17px;
+    line-height: 18px;
+  }
+  &:-ms-input-placeholder {
+    color:#bdbdbd;
+    font-size: 17px;
+    line-height: 18px;
+  }
+}
+
+.order-form__legend-full {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.order-form__add {
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 35px;
+  padding-bottom: 55px;
+  & input {
+    margin: auto;
+  }
+}
+@media @tablet-widths {
+  .order-form__inner-wrapper {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.order-form__section-wrapper:nth-child(2n+2) {
+    background-color: @bg-grey;
+  }
+
+  .order-form__desc {
+  padding-top: 30px;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+  .order-form__item {
+    border: none;
+    position: relative;
+  }
+
+  .order-form__item legend {
+    position: absolute;
+    top: 48px;
+  }
+
+  .order-form__radio p,
+  .order-form__checkbox p {
+    font-size: 19px;
+}
+
+  .order-form__input-hidden:checked + .order-form__checkbox div {
+  background-position: left 10px bottom 12px;
+}
+
+  .order-form__fields-wrapper {
+  padding-left: 167px;
+  }
+
+  .order-form__fields-wrapper--color {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .order-form__fields-wrapper--email,
+  .order-form__fields-wrapper--phone {
+    margin-top: 17px;
+  }
+  .order-form__checkbox {
+    width: 250px;
+  }
+
+  .order-form__label {
+  font-size: 19px;
+}
+
+  .order-form__fields-wrapper--personal{
+    margin-top: 17px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .order-form__input--personal {
+   width: auto;
+   min-width: 375px;
+   margin-left: 25px;
+   flex-grow: 1;
+  }
+
+  .order-form__footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .order-form__add {
+    width: 228px;
+    padding-bottom: 30px;
+  }
+
+  .order-form__legend-full {
+    font-size: 17px;
+    line-height: 30px;
+    padding-bottom: 20px;
+  }
+
+  .order-form__radio div {
+    width: 50px;
+    height: 50px;
+  }
+
+  .order-form__checkbox div {
+    width: 50px;
+    height: 50px;
+  }
+   .order-form__field-textarea {
+    &::-webkit-input-placeholder {
+      font-size: 19px;
+    }
+    &::-moz-placeholder {
+      font-size: 19px;
+    }
+    &:-ms-input-placeholder {
+      font-size: 19px;
+    }
+  }
+
+    .order-form__input {
+
+    &::-webkit-input-placeholder {
+      font-size: 19px;
+    }
+    &::-moz-placeholder {
+      font-size: 19px;
+    }
+    &:-ms-input-placeholder {
+      font-size: 19px;
+    }
+  }
+
+  .order-form__legend-full {
+    padding-top: 25px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+@media @desktop-widths {
+  .order-form__inner-wrapper {
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+  .order-form__fields-wrapper {
+  padding-left: 125px;
+  }
+
+  .order-form__desc {
+  padding-right: 150px;
+  padding-left: 125px;
+  padding-top: 80px;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+  .order-form__fields-wrapper--personal {
+    padding-right: 125px;
+  }
+
+  .order-form__input--personal {
+   min-width: 575px;
+  }
+
+  .order-form__fields-wrapper--phone,
+  .order-form__fields-wrapper--email {
+    padding-right: 125px;
+  }
+  .order-form__footer {
+    margin-right: 125px;
+    margin-left: 125px;
+  }
+
+  .order-form__field-textarea {
+    width: 700px;
+  }
+}

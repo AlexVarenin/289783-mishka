@@ -1,25 +1,35 @@
 .btn {
+  box-sizing: border-box;
+  width: 100%;
   display: block;
-  height: 20px;
+  height: 51px;
   padding: 14px;
   font-weight: bold;
-  color: #444444;
+  color: @bg-darkgrey;
   text-decoration: none;
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
   vertical-align: middle;
-  border: 2px solid #444444;
+  border: 2px solid @bg-darkgrey;
+  background: transparent;
+
+  &:hover {
+    background-color: @bg-darkgrey;
+    color: @bg-white;
+  }
+  &:active {
+    color: lighten(@bg-darkgrey, 30%);
+  }
 
 }
 
 .btn--solid_menthol {
-  width: 100%;
-  height: 52px;
   font-size: 17px;
   line-height: 16px;
   font-weight: bold;
   background-color: @bg-menthol;
   color: @bg-white;
   border: none;
+  .vithoutOutline();
 }

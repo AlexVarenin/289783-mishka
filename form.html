@@ -11,13 +11,17 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
-          <img src="img/logo-mobile.svg" width="86" height="36" alt="Магазин «Мишка»">
+          <picture>
+            <source media="(min-width: 1250px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" alt="Магазин «Мишка»">
+          </picture>
         </a>
         <nav class="main-nav main-nav--nojs">
           <button class="main-nav__toggle" type="button">Открыть меню</button>
           <div class="main-nav__wrapper-main">
             <ul class="main-nav__list-main">
-              <li class="main-nav__item"><a href="">Каталог товаров</a></li>
+              <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
               <li class="main-nav__item"><a href="">Вязание на заказ</a></li>
             </ul>
           </div>
@@ -25,8 +29,22 @@
         <nav class="customer-nav customer-nav--nojs">
           <div class="customer-nav__wrapper-main">
             <ul class="customer-nav__list-main">
-              <li class="customer-nav__item"><a class="customer-nav__item-search" href=""><span>Поиск по сайту</span></a></li>
-              <li class="customer-nav__item"><a class="customer-nav__item-cart" href="">Корзина:<span> пока пуста</span></a></li>
+              <li class="customer-nav__item">
+                <a class="customer-nav__item-search" href="">
+                  <svg width="21" height="19">
+                    <use xlink:href="#icon-search"></use>
+                  </svg>
+                  <span>Поиск по сайту</span>
+                </a>
+              </li>
+              <li class="customer-nav__item">
+                <a class="customer-nav__item-cart" href="">
+                  <svg width="21" height="19">
+                    <use xlink:href="#icon-cart"></use>
+                  </svg>
+                  <span>Корзина: пока пуста</span>
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -49,75 +67,199 @@
       </div>
     </section>
     <main class="page-content">
-      <h1 class="page-header__title visually-hidden">Форма заказа магазина Мишки</h1><!‐‐ скрыт! ‐‐>
-      <section div="order-form">
-        <form class="order-form__form">
+      <h1 class="page-content__title visually-hidden">Форма заказа магазина Мишки</h1><!‐‐ скрыт! ‐‐>
+        <form class="order-form">
+          <div class="order-form__section-wrapper">
+            <div class="order-form__inner-wrapper">
           <p class="order-form__desc">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
           <fieldset class="order-form__item">
             <legend>Тип</legend>
-            <input type="radio" id="interior" name="type" value="interior">
-            <label for="interior">Аксессуар для интерьра</label>
-            <input type="radio" id="toy" name="type" value="toy">
-            <label for="toy">Детская игрушка</label>
+            <div class="order-form__fields-wrapper">
+            <input class="order-form__input-hidden" type="radio" id="interior" name="type" value="interior"  checked>
+            <label class="order-form__radio" for="interior">
+              <div></div>
+              <p>Аксуссуар для<br> интерьра</p>
+            </label>
+            <input class="order-form__input-hidden" type="radio" id="toy" name="type" value="toy">
+            <label class="order-form__radio" for="toy">
+              <div></div>
+              <p>Детская игрушка</p>
+            </label>
+
+            </div>
           </fieldset>
+          </div>
+          </div>
+          <div class="order-form__section-wrapper">
+            <div class="order-form__inner-wrapper">
           <fieldset class="order-form__item">
             <legend class="order-form__legend">Цвет</legend>
-            <input class="order-form__field-checkbox" class type="checkbox" id="white" name="color-white">
-            <label class="order-form__label" for="white">Белый</label>
-            <input class="order-form__field-checkbox" type="checkbox" id="gray" name="color-gray">
-            <label class="order-form__label" for="gray">Детская игрушка</label>
-            <input class="order-form__field-checkbox" type="checkbox" id="tiffany" name="color-tiffany">
-            <label class="order-form__label" for="tiffany">«Тиффани»</label>
-            <input class="order-form__field-checkbox" type="checkbox" id="black" name="color-black">
-            <label class="order-form__label" for="black">Черный</label>
-            <input class="order-form__field-checkbox" type="checkbox" id="pink" name="color-pink">
-            <label class="order-form__label" for="pink">Розовый</label>
-            <input class="order-form__field-checkbox" class="order-form__field-checkbox" type="checkbox" id="orange" name="color-orange">
-            <label class="order-form__label" for="orange">Оранжевый</label>
+            <div class="order-form__fields-wrapper order-form__fields-wrapper--color">
+            <input class="order-form__input-hidden" class type="checkbox" id="white" name="color-white">
+            <label class="order-form__checkbox" for="white">
+              <div></div>
+              <p>Белый</p>
+            </label>
+            <input class="order-form__input-hidden" type="checkbox" id="gray" name="color-gray">
+            <label class="order-form__checkbox" for="gray">
+              <div></div>
+              <p>Серый</p>
+            </label>
+            <input class="order-form__input-hidden" type="checkbox" id="tiffany" name="color-tiffany">
+            <label class="order-form__checkbox" for="tiffany">
+              <div></div>
+              <p>«Тиффани»</p>
+            </label>
+            <input class="order-form__input-hidden" type="checkbox" id="black" name="color-black">
+            <label class="order-form__checkbox" for="black">
+              <div></div>
+              <p>Черный</p>
+            </label>
+            <input class="order-form__input-hidden" type="checkbox" id="pink" name="color-pink">
+            <label class="order-form__checkbox" for="pink">
+              <div></div>
+              <p>Розовый</p>
+            </label>
+            <input class="order-form__input-hidden" class="order-form__field-checkbox" type="checkbox" id="orange" name="color-orange">
+            <label class="order-form__checkbox" for="orange">
+              <div></div>
+              <p>Оранжевый</p>
+            </label>
+            </div>
           </fieldset>
+          </div>
+          </div>
+          <div class="order-form__section-wrapper">
+            <div class="order-form__inner-wrapper">
           <fieldset class="order-form__item">
             <legend class="order-form__legend">Фио</legend>
-            <input class="order-form__field-text" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя*" required>
+            <div class="order-form__fields-wrapper order-form__fields-wrapper--personal">
             <label class="order-form__label" for="first-name">Имя:</label>
-            <input class="order-form__field-text" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию*" required>
+            <input class="order-form__input order-form__input--personal" type="text" id="first-name" name="first-name" placeholder="Введите ваше имя*" required>
             <label class="order-form__label" for="last-name">Фамилия:</label>
-            <input class="order-form__field-text" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
+            <input class="order-form__input order-form__input--personal" type="text" id="last-name" name="last-name" placeholder="Укажите фамилию*" required>
             <label class="order-form__label" for="patronymic">Отчество:</label>
+            <input class="order-form__input order-form__input--personal" type="text" id="patronymic" name="patronymic" placeholder="Отчество, если желаете">
+            </div>
           </fieldset>
+          </div>
+          </div>
+          <div class="order-form__section-wrapper">
+            <div class="order-form__inner-wrapper">
           <fieldset class="order-form__item">
             <legend class="order-form__legend">Tел</legend>
-            <input class="order-form__field-phone" type="tel" id="tel" name="first-name" placeholder="+7 ХХХ ХХ ХХ*" required>
+            <div class="order-form__fields-wrapper order-form__fields-wrapper--phone">
+            <input class="order-form__input" type="tel" id="tel" name="first-name" placeholder="+7 ХХХ ХХ ХХ*" required>
+            <label class="order-form__label-icon">
+              <svg width="25" height="25">
+                <use xlink:href="#icon-phone"></use>
+              </svg>
+            </label>
+            </div>
           </fieldset>
+
           <fieldset class="order-form__item">
             <legend class="order-form__legend">e-mail</legend>
-            <input class="order-form__field-email" type="email" id="email" name="first-name" placeholder="Ваш Email*" required>
+            <div class="order-form__fields-wrapper order-form__fields-wrapper--email">
+            <input class="order-form__input" type="email" id="email" name="first-name" placeholder="Ваш Email*" required>
+            <label class="order-form__label-icon">
+              <svg width="32" height="32">
+                <use xlink:href="#icon-mail"></use>
+              </svg>
+            </label>
+            </div>
           </fieldset>
+          </div>
+          </div>
+          <div class="order-form__section-wrapper">
+            <div class="order-form__inner-wrapper">
           <fieldset class="order-form__item">
             <legend class="order-form__legend">Доп</legend>
-            <textarea class="order-form__field-textarea" name="text" id="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <div class="order-form__fields-wrapper">
+            <textarea class="order-form__field-textarea" name="text" id="text"  placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </div>
           </fieldset>
-          <small class="order-form__legend-full"><sup>*</sup>Поля обязательны для заполнения</small>
-          <div class="order-form__add btn">
-            <input type="submit" value="Отправить заказ">
+          <div class="order-form__footer">
+          <small class="order-form__legend-full">*Поля обязательны для заполнения</small>
+          <div class="order-form__add">
+            <input class="btn" type="submit" value="Отправить заказ">
+          </div>
+            </div>
+          </div>
           </div>
         </form>
-      </section>
     </main>
      <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-          <img src="img/logo-mobile.svg" width="86" height="36" alt="Магазин «Мишка»">
+          <a href="index.html">
+            <svg width="102" height="35">
+              <use xlink:href="#logo-footer"></use>
+          </svg>
+          </a>
         </div>
         <div class="page‐footer__social social-links">
-            <a class="social-links__item social-links__item--insta" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
-            <a class="social-links__item social-links__item--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-            <a class="social-links__item social-links__item--twitter" href="https://www.twitter.com/htmlacademy">Мы в Твиттере</a>
+            <a class="social-links__item social-links__item--insta" href="https://www.instagram.com/htmlacademy">
+               <span>Мы в Инстаграме</span>
+               <svg width="22" height="22">
+                 <use xlink:href="#icon-insta"></use>
+               </svg>
+            </a>
+            <a class="social-links__item social-links__item--fb" href="https://www.facebook.com/htmlacademy">
+              <span>Мы в Фейсбуке</span>
+              <svg width="15" height="28">
+                 <use xlink:href="#icon-fb"></use>
+               </svg>
+            </a>
+            <a class="social-links__item social-links__item--twitter" href="https://www.twitter.com/htmlacademy">
+              <span>Мы в Твиттере</span>
+               <svg width="24" height="21">
+                 <use xlink:href="#icon-twitter"></use>
+               </svg>
+            </a>
         </div>
         <div class="page‐footer__copyright">
           <p>Разработано:</p>
-          <a class="page‐footer__copyright‐link" href="https://htmlacademy.ru/intensive/adaptive">html academy</a>
+          <a class="page‐footer__copyright‐link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span>html academy</span>
+            <svg width="27" height="35">
+              <use xlink:href="#logo-htmlacademy"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </footer>
+     <script>
+      !function(a,b){"use strict";var c="img/symbols.svg",d=1;if(!b.createElementNS||!b.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)return!0;var e,f,g="localStorage"in a&&null!==a.localStorage,h=function(){b.body.insertAdjacentHTML("afterbegin",f)},i=function(){b.body?h():b.addEventListener("DOMContentLoaded",h)};if(g&&localStorage.getItem("inlineSVGrev")==d&&(f=localStorage.getItem("inlineSVGdata")))return i(),!0;try{e=new XMLHttpRequest,e.open("GET",c,!0),e.onload=function(){e.status>=200&&e.status<400&&(f=e.responseText,i(),g&&(localStorage.setItem("inlineSVGdata",f),localStorage.setItem("inlineSVGrev",d)))},e.send()}catch(j){}}(window,document);
+    </script>
+    <script>
+
+     var navMain = document.querySelector('.main-nav');
+     var navToggle = document.querySelector('.main-nav__toggle');
+
+     var navCustomer = document.querySelector('.customer-nav');
+
+
+     navMain.classList.remove('.main-nav--nojs');
+     navMain.classList.add('main-nav--closed');
+
+     navCustomer.classList.remove('.customer-nav--nojs');
+     navCustomer.classList.add('customer-nav--closed');
+
+     navToggle.addEventListener('click', function() {
+       if (navMain.classList.contains('main-nav--closed')) {
+         navMain.classList.remove('main-nav--closed');
+         navMain.classList.add('main-nav--opened');
+         navCustomer.classList.remove('customer-nav--closed');
+         navCustomer.classList.add('customer-nav--opened');
+       } else {
+         navMain.classList.add('main-nav--closed');
+         navMain.classList.remove('main-nav--opened');
+         navCustomer.classList.add('customer-nav--closed');
+         navCustomer.classList.remove('customer-nav--opened');
+      }
+    });
+  </script>
+
   </body>
 </html>
